@@ -1,0 +1,11 @@
+<div class="product-card-mini flex items-center gap-4 bg-white rounded-lg shadow p-4">
+    <a href="{{ product.url }}" class="flex-shrink-0">
+        <img src="{{ product.image }}" alt="{{ product.name }}" class="w-20 h-20 object-cover rounded">
+    </a>
+    <div class="flex-1">
+        <a href="{{ product.url }}">
+            <h4 class="font-bold hover:text-primary">{{ product.name }}</h4>
+        </a>
+        <p class="text-primary font-bold">{{ product.price }}</p>
+    </div>
+</div>

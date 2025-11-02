@@ -1,0 +1,39 @@
+{% extends "layouts/master.twig" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-8">{{ trans("pages.customer.order_details") }} #{{ order.id }}</h1>
+    
+    <div class="bg-white rounded-lg shadow-md p-8 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+                <h3 class="font-bold mb-2">{{ trans("pages.customer.order_info") }}</h3>
+                <p>{{ trans("pages.customer.order_date") }}: {{ order.date }}</p>
+                <p>{{ trans("pages.customer.order_status") }}: {{ order.status }}</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">{{ trans("pages.customer.shipping_address") }}</h3>
+                <p>{{ order.shipping_address }}</p>
+            </div>
+        </div>
+        
+        <h3 class="font-bold mb-4">{{ trans("pages.customer.order_items") }}</h3>
+        <div class="space-y-4">
+            {% for item in order.items %}
+            <div class="flex items-center gap-4 border-b pb-4">
+                <img src="{{ item.image }}" alt="{{ item.name }}" class="w-20 h-20 object-cover">
+                <div class="flex-1">
+                    <h4 class="font-bold">{{ item.name }}</h4>
+                    <p class="text-gray-600">{{ trans("pages.customer.quantity") }}: {{ item.quantity }}</p>
+                </div>
+                <p class="font-bold">{{ item.price }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="mt-6 text-right">
+            <p class="text-2xl font-bold">{{ trans("pages.customer.total") }}: {{ order.total }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

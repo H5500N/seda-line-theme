@@ -1,0 +1,16 @@
+<div class="product-options space-y-4">
+    {% for option in product.options %}
+    <div class="option-group">
+        <label class="block font-bold mb-2">{{ option.name }}</label>
+        <div class="flex flex-wrap gap-2">
+            {% for value in option.values %}
+            <button class="option-value px-4 py-2 border rounded hover:border-primary hover:text-primary transition"
+                    data-option-id="{{ option.id }}"
+                    data-value-id="{{ value.id }}">
+                {{ value.name }}
+            </button>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

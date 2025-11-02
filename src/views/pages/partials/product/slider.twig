@@ -1,0 +1,12 @@
+<div class="product-slider swiper">
+    <div class="swiper-wrapper">
+        {% for product in products %}
+        <div class="swiper-slide">
+            {% include "pages/partials/product/card.twig" %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
