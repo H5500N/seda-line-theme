@@ -1,0 +1,49 @@
+{% extends "layouts.master" %}
+
+{% block content %}
+<div class="product-single-page">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Product Images -->
+            <div class="product-images">
+                <salla-product-images></salla-product-images>
+            </div>
+            
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1 class="text-3xl font-bold mb-4">{{ product.name }}</h1>
+                
+                <div class="product-price mb-6">
+                    <salla-product-price></salla-product-price>
+                </div>
+                
+                <div class="product-description mb-6">
+                    <p class="text-gray-700">{{ product.description }}</p>
+                </div>
+                
+                <!-- Product Options -->
+                <div class="product-options mb-6">
+                    <salla-product-options></salla-product-options>
+                </div>
+                
+                <!-- Add to Cart -->
+                <div class="add-to-cart mb-8">
+                    <salla-add-product-button></salla-add-product-button>
+                </div>
+                
+                <!-- AI Recommendations -->
+                <div class="ai-recommendations mt-8">
+                    <h3 class="text-xl font-bold mb-4">{{ trans('ai.recommendations') }}</h3>
+                    <div id="ai-product-recommendations"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="related-products mt-12">
+            <h2 class="text-2xl font-bold mb-6">{{ trans('product.related_products') }}</h2>
+            <salla-products-slider></salla-products-slider>
+        </div>
+    </div>
+</div>
+{% endblock %}

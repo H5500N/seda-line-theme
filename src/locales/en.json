@@ -1,0 +1,53 @@
+{
+  "common": {
+    "shop_now": "Shop Now",
+    "add_to_cart": "Add to Cart",
+    "view_more": "View More",
+    "search": "Search",
+    "cart": "Cart",
+    "account": "My Account",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register"
+  },
+  "home": {
+    "welcome": "Welcome to Seda Line",
+    "hero_title": "Luxury Abayas for Every Occasion",
+    "hero_subtitle": "Discover our exclusive collection of elegant abayas",
+    "how_to_choose": "How to Choose?",
+    "best_sellers": "Best Sellers",
+    "why_seda_line": "Why Seda Line?",
+    "testimonials": "Customer Reviews"
+  },
+  "product": {
+    "price": "Price",
+    "quantity": "Quantity",
+    "size": "Size",
+    "color": "Color",
+    "description": "Description",
+    "details": "Details",
+    "reviews": "Reviews",
+    "related_products": "Related Products"
+  },
+  "cart": {
+    "your_cart": "Your Cart",
+    "empty_cart": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "footer": {
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "follow_us": "Follow Us"
+  },
+  "ai": {
+    "chatbot_welcome": "Hello! How can I help you today?",
+    "chatbot_placeholder": "Type your question here...",
+    "recommendations": "Recommended for You",
+    "search_by_image": "Search by Image"
+  }
+}

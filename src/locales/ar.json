@@ -1,0 +1,53 @@
+{
+  "common": {
+    "shop_now": "تسوقي الآن",
+    "add_to_cart": "أضف إلى السلة",
+    "view_more": "عرض المزيد",
+    "search": "بحث",
+    "cart": "السلة",
+    "account": "حسابي",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "register": "تسجيل جديد"
+  },
+  "home": {
+    "welcome": "مرحباً بك في سيدا لاين",
+    "hero_title": "عبايات فاخرة لكل مناسبة",
+    "hero_subtitle": "اكتشفي مجموعتنا الحصرية من العبايات الأنيقة",
+    "how_to_choose": "كيف تختارين؟",
+    "best_sellers": "الأكثر مبيعاً",
+    "why_seda_line": "لماذا سيدا لاين؟",
+    "testimonials": "آراء العملاء"
+  },
+  "product": {
+    "price": "السعر",
+    "quantity": "الكمية",
+    "size": "المقاس",
+    "color": "اللون",
+    "description": "الوصف",
+    "details": "التفاصيل",
+    "reviews": "التقييمات",
+    "related_products": "منتجات ذات صلة"
+  },
+  "cart": {
+    "your_cart": "سلة التسوق",
+    "empty_cart": "سلتك فارغة",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "total": "الإجمالي",
+    "checkout": "إتمام الطلب"
+  },
+  "footer": {
+    "about_us": "من نحن",
+    "contact_us": "اتصل بنا",
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
+    "follow_us": "تابعنا"
+  },
+  "ai": {
+    "chatbot_welcome": "مرحباً! كيف يمكنني مساعدتك اليوم؟",
+    "chatbot_placeholder": "اكتبي سؤالك هنا...",
+    "recommendations": "منتجات مقترحة لك",
+    "search_by_image": "ابحثي بالصورة"
+  }
+}

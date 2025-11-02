@@ -1,104 +1,207 @@
 {
-  "name": "Seda Line Luxury Theme",
-  "version": "1.0.0",
-  "description": "أفخم ثيم احترافي بميزات ذكاء صناعي لمتجر العبايات - سيدا لاين",
-  "author": {
-    "name": "Seda Line",
-    "email": "info@seda-line.com"
-  },
-  "preview": {
-    "home": "https://seda-line.com"
-  },
-  "support": {
-    "email": "support@seda-line.com"
-  },
-  "customizer": {
+    "name": {
+        "ar": "سيدا لاين",
+        "en": "Seda Line Theme"
+    },
+    "repository": "https://github.com/YOUR_USERNAME/seda-line-theme",
+    "author_email": "support@sedaline.com",
+    "features": [
+        "mega-menu",
+        "fonts",
+        "color",
+        "breadcrumb",
+        "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner",
+        "component-fixed-products",
+        "component-products-slider",
+        "component-photos-slider",
+        "component-parallax-background",
+        "component-testimonials",
+        "component-square-photos",
+        "component-store-features",
+        "component-youtube",
+        "menu-images",
+        "filters",
+        "ai-chatbot",
+        "ai-recommendations",
+        "ai-image-search"
+    ],
     "settings": [
-      {
-        "key": "colors",
-        "title": "الألوان",
-        "description": "تخصيص ألوان المتجر",
-        "fields": [
-          {
-            "key": "primary_color",
-            "type": "color",
-            "title": "اللون الأساسي",
-            "default": "#000000"
-          },
-          {
-            "key": "secondary_color",
-            "type": "color",
-            "title": "اللون الثانوي",
-            "default": "#D4AF37"
-          },
-          {
-            "key": "accent_color",
-            "type": "color",
-            "title": "لون التمييز",
-            "default": "#F5F5DC"
-          }
-        ]
-      },
-      {
-        "key": "ai_features",
-        "title": "ميزات الذكاء الصناعي",
-        "description": "تفعيل وتخصيص ميزات الذكاء الصناعي",
-        "fields": [
-          {
-            "key": "enable_ai_recommendations",
-            "type": "switch",
-            "title": "تفعيل التوصيات الذكية",
-            "default": true
-          },
-          {
-            "key": "enable_ai_chatbot",
-            "type": "switch",
-            "title": "تفعيل المساعد الافتراضي",
-            "default": true
-          },
-          {
-            "key": "enable_ai_search",
-            "type": "switch",
-            "title": "تفعيل البحث الذكي",
-            "default": true
-          },
-          {
-            "key": "enable_auto_descriptions",
-            "type": "switch",
-            "title": "توليد أوصاف المنتجات تلقائياً",
-            "default": true
-          }
-        ]
-      },
-      {
-        "key": "layout",
-        "title": "التخطيط",
-        "description": "إعدادات التخطيط العام",
-        "fields": [
-          {
-            "key": "header_style",
-            "type": "select",
-            "title": "نمط الهيدر",
-            "options": [
-              {"value": "minimal", "label": "بسيط"},
-              {"value": "luxury", "label": "فاخر"},
-              {"value": "modern", "label": "عصري"}
-            ],
-            "default": "luxury"
-          },
-          {
-            "key": "product_card_style",
-            "type": "select",
-            "title": "نمط بطاقة المنتج",
-            "options": [
-              {"value": "classic", "label": "كلاسيكي"},
-              {"value": "modern", "label": "عصري"},
-              {"value": "luxury", "label": "فاخر"}
-            ],
-            "default": "luxury"
-          }
-        ]
-      }
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-ai-section",
+            "value": "إعدادات الذكاء الاصطناعي",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تفعيل المساعد الافتراضي الذكي",
+            "description": "مساعد ذكي يساعد العملاء في اختيار المنتجات المناسبة",
+            "id": "enable_ai_chatbot",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تفعيل التوصيات الذكية",
+            "description": "عرض منتجات مقترحة بناءً على سلوك العميل",
+            "id": "enable_ai_recommendations",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تفعيل البحث بالصورة",
+            "description": "السماح للعملاء بالبحث عن منتجات باستخدام الصور",
+            "id": "enable_image_search",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "static",
+            "id": "static-line1",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label2",
+            "value": "خيارات أعلى الصفحة",
+            "variant": "h6"
+        },
+        {
+            "id": "header_is_sticky",
+            "label": "تثبيت القائمة الرئيسية أعلى الصفحة عند التمرير لأسفل",
+            "description": "يُنصح بإلغاء تفعيلها في حالة وجود عناصر كثيرة في القائمة المنسدلة",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "شريط علوي داكن",
+            "description": null,
+            "id": "topnav_is_dark",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": false
+        },
+        {
+            "type": "static",
+            "id": "static-line3",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label4",
+            "value": "خيارات أسفل الصفحة",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "الوضع الداكن",
+            "description": null,
+            "id": "footer_is_dark",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": false
+        },
+        {
+            "type": "static",
+            "id": "static-line5",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label6",
+            "value": "خيارات صفحة المنتج",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تثبيت زر الإضافة والكمية أسفل شاشة الجوال",
+            "description": null,
+            "id": "sticky_add_to_cart",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "عرض 360 درجة للمنتجات",
+            "description": "تمكين العملاء من رؤية المنتج من جميع الزوايا",
+            "id": "enable_360_view",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false
+        }
+    ],
+    "components": [
+        {
+            "key": "seda-line-hero-banner",
+            "title": "بانر رئيسي فاخر",
+            "icon": "sicon-image-carousel",
+            "path": "home.banner",
+            "is_default": true
+        },
+        {
+            "key": "seda-line-how-to-choose",
+            "title": "كيف تختارين؟",
+            "icon": "sicon-help-circle",
+            "path": "home.how-to-choose",
+            "is_default": true
+        },
+        {
+            "key": "seda-line-best-sellers",
+            "title": "الأكثر مبيعاً",
+            "icon": "sicon-star",
+            "path": "home.best-sellers",
+            "is_default": true
+        },
+        {
+            "key": "seda-line-why-us",
+            "title": "لماذا سيدا لاين؟",
+            "icon": "sicon-award",
+            "path": "home.why-seda-line",
+            "is_default": true
+        },
+        {
+            "key": "seda-line-testimonials",
+            "title": "آراء العملاء",
+            "icon": "sicon-chat-conversation-alt",
+            "path": "home.testimonials",
+            "is_default": true
+        },
+        {
+            "key": "seda-line-ai-chatbot",
+            "title": "المساعد الافتراضي الذكي",
+            "icon": "sicon-robot",
+            "path": "ai.chatbot",
+            "is_default": true
+        }
     ]
-  }
 }
