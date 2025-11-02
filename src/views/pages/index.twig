@@ -1,22 +1,26 @@
 {% extends "layouts/master.twig" %}
 
 {% block content %}
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold my-8">مرحباً بك في متجر سيدا لاين</h1>
+    {# Hero Section #}
+    <section class="hero-section">
+        <div class="hero-image" style="background-image: url('{{ asset("images/hero-bg.jpg") }}');">
+            <div class="hero-content">
+                <h1>{{ trans("home.hero_title") }}</h1>
+                <p>{{ trans("home.hero_subtitle") }}</p>
+                <a href="{{ link("products") }}" class="btn btn-primary">{{ trans("home.discover_collection") }}</a>
+            </div>
+        </div>
+    </section>
 
-        {# Banner Section #}
-        {% include "components/home/banner.twig" %}
+    {# How to Choose Section #}
+    {% include "components/home/how-to-choose.twig" %}
 
-        {# How to Choose Section #}
-        {% include "components/home/how-to-choose.twig" %}
+    {# Best Sellers Section #}
+    {% include "components/home/best-sellers.twig" %}
 
-        {# Best Sellers Section #}
-        {% include "components/home/best-sellers.twig" %}
+    {# Why Seda Line Section #}
+    {% include "components/home/why-seda-line.twig" %}
 
-        {# Why Seda-line Section #}
-        {% include "components/home/why-seda-line.twig" %}
-
-        {# Testimonials Section #}
-        {% include "components/home/testimonials.twig" %}
-    </div>
+    {# Testimonials Section #}
+    {% include "components/home/testimonials.twig" %}
 {% endblock %}

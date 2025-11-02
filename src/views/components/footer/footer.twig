@@ -1,36 +1,38 @@
-<footer class="bg-black text-white py-8">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4">سيدا لاين</h3>
-                <p>متجر عبايات فاخرة بتصاميم عصرية وجودة عالية.</p>
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-widgets">
+            <div class="widget">
+                <h4>{{ trans("common.about_us") }}</h4>
+                <p>{{ store.description }}</p>
             </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+            <div class="widget">
+                <h4>{{ trans("common.quick_links") }}</h4>
                 <ul>
-                    <li><a href="{{ link('home') }}" class="hover:text-gray-400">الرئيسية</a></li>
-                    <li><a href="{{ link('products') }}" class="hover:text-gray-400">المنتجات</a></li>
-                    <li><a href="{{ link('about') }}" class="hover:text-gray-400">من نحن</a></li>
-                    <li><a href="{{ link('contact') }}" class="hover:text-gray-400">اتصل بنا</a></li>
+                    <li><a href="{{ link("home") }}">{{ trans("common.home") }}</a></li>
+                    <li><a href="{{ link("products") }}">{{ trans("common.products") }}</a></li>
+                    <li><a href="{{ link("about") }}">{{ trans("common.about_us") }}</a></li>
+                    <li><a href="{{ link("contact") }}">{{ trans("common.contact_us") }}</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
-                <p>info@seda-line.com</p>
-                <p>+966 12 345 6789</p>
+            <div class="widget">
+                <h4>{{ trans("common.contact_us") }}</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> {{ store.address }}</li>
+                    <li><i class="fas fa-phone"></i> {{ store.phone }}</li>
+                    <li><i class="fas fa-envelope"></i> {{ store.email }}</li>
+                </ul>
             </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">تابعنا</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-gray-400"><i class="fab fa-snapchat"></i></a>
+            <div class="widget">
+                <h4>{{ trans("common.follow_us") }}</h4>
+                <div class="social-media">
+                    <a href="{{ store.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ store.social.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ store.social.snapchat }}" target="_blank"><i class="fab fa-snapchat"></i></a>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <p>&copy; 2025 سيدا لاين. جميع الحقوق محفوظة.</p>
+        <div class="footer-bottom">
+            <p>&copy; {{ "now"|date("Y") }} {{ store.name }}. {{ trans("common.all_rights_reserved") }}</p>
         </div>
     </div>
 </footer>

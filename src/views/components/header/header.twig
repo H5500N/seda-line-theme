@@ -1,24 +1,51 @@
-<header class="bg-white shadow-md">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-            <div class="logo">
-                <a href="{{ link('home') }}">
-                    <img src="{{ asset('images/logo.png') }}" alt="Seda Line Logo" class="h-12">
-                </a>
+<header class="main-header">
+    <div class="top-header">
+        <div class="container">
+            <div class="contact-info">
+                <a href="https://wa.me/966XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i> +966 XXX XXX XXX</a>
             </div>
-            <nav>
-                <ul class="flex space-x-8">
-                    <li><a href="{{ link('home') }}" class="text-gray-600 hover:text-black">الرئيسية</a></li>
-                    <li><a href="{{ link('products') }}" class="text-gray-600 hover:text-black">المنتجات</a></li>
-                    <li><a href="{{ link('about') }}" class="text-gray-600 hover:text-black">من نحن</a></li>
-                    <li><a href="{{ link('contact') }}" class="text-gray-600 hover:text-black">اتصل بنا</a></li>
-                </ul>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <a href="{{ link('search') }}" class="text-gray-600 hover:text-black"><i class="fas fa-search"></i></a>
-                <a href="{{ link('cart') }}" class="text-gray-600 hover:text-black"><i class="fas fa-shopping-cart"></i></a>
-                <a href="{{ link('wishlist') }}" class="text-gray-600 hover:text-black"><i class="fas fa-heart"></i></a>
+            <div class="user-actions">
+                <a href="{{ link("login") }}">{{ trans("common.login") }}</a>
+                <a href="{{ link("register") }}">{{ trans("common.register") }}</a>
+                <div class="language-switcher">
+                    <a href="#">العربية</a> | <a href="#">English</a>
+                </div>
             </div>
         </div>
     </div>
+    <div class="main-nav">
+        <div class="container">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="{{ trans("common.search_placeholder") }}">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="logo">
+                <a href="{{ link("home") }}">
+                    <img src="{{ asset("images/logo.png") }}" alt="{{ store.name }}">
+                </a>
+            </div>
+            <div class="header-icons">
+                <a href="{{ link("wishlist") }}"><i class="fas fa-heart"></i></a>
+                <a href="{{ link("cart") }}"><i class="fas fa-shopping-cart"></i> <span>{{ cart.count }}</span></a>
+            </div>
+        </div>
+    </div>
+    <nav class="main-menu">
+        <div class="container">
+            <ul>
+                <li><a href="{{ link("home") }}">{{ trans("common.home") }}</a></li>
+                <li><a href="{{ link("products.new") }}">{{ trans("common.new_in") }}</a></li>
+                <li><a href="{{ link("products.sale") }}">{{ trans("common.sale") }}</a></li>
+                <li><a href="{{ link("products.category", {slug: "daily-abayas"}) }}">{{ trans("common.daily_abayas") }}</a></li>
+                <li><a href="{{ link("products.category", {slug: "work-abayas"}) }}">{{ trans("common.work_abayas") }}</a></li>
+                <li><a href="{{ link("products.category", {slug: "occasions-abayas"}) }}">{{ trans("common.occasions_abayas") }}</a></li>
+                <li><a href="{{ link("products.category", {slug: "luxury-abayas"}) }}">{{ trans("common.luxury_abayas") }}</a></li>
+                <li><a href="{{ link("about") }}">{{ trans("common.about_us") }}</a></li>
+                <li><a href="{{ link("contact") }}">{{ trans("common.contact_us") }}</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
