@@ -1,0 +1,104 @@
+{
+  "name": "Seda Line Luxury Theme",
+  "version": "1.0.0",
+  "description": "أفخم ثيم احترافي بميزات ذكاء صناعي لمتجر العبايات - سيدا لاين",
+  "author": {
+    "name": "Seda Line",
+    "email": "info@seda-line.com"
+  },
+  "preview": {
+    "home": "https://seda-line.com"
+  },
+  "support": {
+    "email": "support@seda-line.com"
+  },
+  "customizer": {
+    "settings": [
+      {
+        "key": "colors",
+        "title": "الألوان",
+        "description": "تخصيص ألوان المتجر",
+        "fields": [
+          {
+            "key": "primary_color",
+            "type": "color",
+            "title": "اللون الأساسي",
+            "default": "#000000"
+          },
+          {
+            "key": "secondary_color",
+            "type": "color",
+            "title": "اللون الثانوي",
+            "default": "#D4AF37"
+          },
+          {
+            "key": "accent_color",
+            "type": "color",
+            "title": "لون التمييز",
+            "default": "#F5F5DC"
+          }
+        ]
+      },
+      {
+        "key": "ai_features",
+        "title": "ميزات الذكاء الصناعي",
+        "description": "تفعيل وتخصيص ميزات الذكاء الصناعي",
+        "fields": [
+          {
+            "key": "enable_ai_recommendations",
+            "type": "switch",
+            "title": "تفعيل التوصيات الذكية",
+            "default": true
+          },
+          {
+            "key": "enable_ai_chatbot",
+            "type": "switch",
+            "title": "تفعيل المساعد الافتراضي",
+            "default": true
+          },
+          {
+            "key": "enable_ai_search",
+            "type": "switch",
+            "title": "تفعيل البحث الذكي",
+            "default": true
+          },
+          {
+            "key": "enable_auto_descriptions",
+            "type": "switch",
+            "title": "توليد أوصاف المنتجات تلقائياً",
+            "default": true
+          }
+        ]
+      },
+      {
+        "key": "layout",
+        "title": "التخطيط",
+        "description": "إعدادات التخطيط العام",
+        "fields": [
+          {
+            "key": "header_style",
+            "type": "select",
+            "title": "نمط الهيدر",
+            "options": [
+              {"value": "minimal", "label": "بسيط"},
+              {"value": "luxury", "label": "فاخر"},
+              {"value": "modern", "label": "عصري"}
+            ],
+            "default": "luxury"
+          },
+          {
+            "key": "product_card_style",
+            "type": "select",
+            "title": "نمط بطاقة المنتج",
+            "options": [
+              {"value": "classic", "label": "كلاسيكي"},
+              {"value": "modern", "label": "عصري"},
+              {"value": "luxury", "label": "فاخر"}
+            ],
+            "default": "luxury"
+          }
+        ]
+      }
+    ]
+  }
+}

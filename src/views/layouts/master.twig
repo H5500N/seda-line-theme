@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ direction }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-100 text-gray-800">
+    {% include "components/header/header.twig" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "components/footer/footer.twig" %}
+
+    <script src="{{ asset('dist/js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
