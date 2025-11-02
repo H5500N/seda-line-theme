@@ -1,10 +1,12 @@
 {
+    "version": "1.0.0",
+    "theme_name": "سيدا لاين",
+    "repo_url": "https://github.com/H5500N/seda-line-theme",
+    "support_url": "https://seda-line.com",
     "name": {
         "ar": "سيدا لاين",
         "en": "Seda Line Theme"
     },
-    "repository": "https://github.com/H5500N/seda-line-theme",
-    "author_email": "support@sedaline.com",
     "features": [
         "mega-menu",
         "fonts",
